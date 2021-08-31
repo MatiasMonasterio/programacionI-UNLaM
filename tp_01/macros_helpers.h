@@ -10,7 +10,7 @@
 
 #define ABS(x) (x) >= 0 ? (x) : -(x)
 #define PARTE_ENTERA(x) (int)(x)
-#define REDONDEO(x) ABS(x - (int)x) > 0.5 ? (int)x + 1 : (int)x
+#define REDONDEO(x) ABS(x - PARTE_ENTERA(x)) > 0.5 ? PARTE_ENTERA(x) + 1 : PARTE_ENTERA(x)
 
 #define ESLETRA(c) (ESMAYUS(c) || ESMINUS(c))
 #define ESNUMERO(c) ((c) >= '0' && (c) <= '9')
